@@ -14,6 +14,14 @@ pnpm install
 pnpm run dev
 ```
 
+在控制台/你的`common.js`页面中添加 
+
 ```javascript
-mw.loader.load("http://127.0.0.1:3000/main.js");
+mw.loader.load("http://localhost:3000/main.js");
+// 每次重载时刷新页面
+```
+
+### 打包
+```shell
+pnpm run build
 ```

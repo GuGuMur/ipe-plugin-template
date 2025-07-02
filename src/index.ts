@@ -1,4 +1,5 @@
 import config from '../ipe-plugin.json'
+import './style.css';
 
 mw.hook('InPageEdit.toolbox').add(({ $toolbox }) => {
     $toolbox
@@ -9,17 +10,13 @@ mw.hook('InPageEdit.toolbox').add(({ $toolbox }) => {
                 $('<button>',
                     {
                         id: config.name,
-                        class: `ipe-toolbox-btn fa ${config.icon} ipe-trapper`
+                        class: `ipe-toolbox-btn fa ${config.icon}`
                     })
                     .click(main)
             )
         );
-    mw.util.addCSS(`
-        #${config.name} {
-            background: #845EC2 !important;
-        }
-    `);
 });
-async function main() {
-    console.log("Hello world? 2")
+
+async function main():Promise<void> {
+    console.log("Hello");
 }
